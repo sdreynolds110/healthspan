@@ -1,15 +1,30 @@
 import React from "react";
 
-function secondRow () {
+
+function SecondRow () {
     return (
         <div className="container">
-            <div class="row text">
-                <div class="col col-lg-5"><h2>Test</h2></div>
-                <div class="col-md-3"></div>
-                <div class="col col-lg-4"><h2>Test</h2></div>
+            <div className="row">
+                <div className="col col-md-5">
+                    <h3 className="healthTip">Health Tip of the Day!</h3>
+                    <div className="card">
+                        <div className="content">
+                        </div>
+                    </div>
+                </div>
+                <div className="col col-md">
+                        <div className="content">
+                        </div>
+                </div>
+                <div className="col col-md-5">
+                    <div className="card">
+                        <div className="content">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     )
 }
 
-export default secondRow;
+export default SecondRow;
