@@ -2,6 +2,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  /* background-image: url(../src/assets/doctor.jpeg);
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-position: center; */
 }
 .App {
   text-align: center;
@@ -13,20 +18,20 @@ body {
 }
 
 .navbar-brand {
+  margin-left: 1rem;
+  font-size: 5.25rem!important;
+  font-family: 'Baloo Paaji 2', cursive;
   display: inline-block;
   padding-top: .3125rem;
   padding-bottom: .3125rem;
-  margin-left: 1rem;
-  margin-right: 17rem;
-  font-family: 'Baloo Paaji 2', cursive;
-  font-size: 5.25rem;
+  margin-right: 1rem;
   line-height: inherit;
   white-space: nowrap;
 }
 .nav {
   background-color: rgb(33, 82, 247);
   font-family: Arial;
-  font-size: 100%;
+  /* font-size: 100%; */
   color: white;
 }
 .nav a {
@@ -99,7 +104,7 @@ section {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-name: ticker;
-  animation-duration: 40s;
+  animation-duration: 50s;
 }
 .ticker-move:hover {
   animation-play-state: paused;
@@ -108,7 +113,17 @@ section {
   display: inline-block;
   padding: 0 2rem;
 }
-
+.input {
+  width: 400px;
+  height: 40px;
+  font-size: relative;
+}
+.inputBio {
+  width: 400px;
+  height: 200px;
+  font-size: 17px;
+  word-wrap: break-word;
+}
 
 
 

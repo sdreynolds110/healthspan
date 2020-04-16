@@ -9,6 +9,7 @@ function SecondRow () {
                     <h3 className="healthTip">Health Tip of the Day!</h3>
                     <div className="card">
                         <div className="content">
+                            <p className="tipCall">BLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAH</p>
                         </div>
                     </div>
                 </div>

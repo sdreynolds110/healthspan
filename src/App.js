@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 import { Route, NavLink, Switch } from "react-router-dom";
 import './App.css';
 import Home from './components/home';
-import Provider from './components/providerPage';
+import ProviderLogin from './components/providerLogin';
 import Patient from "./components/patientPage"
 import { CSSTransition, TransitionGroup, } from 'react-transition-group';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 
 class App extends Component {
@@ -13,12 +15,14 @@ class App extends Component {
 
     return (
       <div className="App">
-        <div className="nav">
-          <h1 className="navbar-brand">Health <i class="fas fa-arrows-alt-h"></i> Span</h1>
+        <div className="nav" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+          <h1 className="navbar-brand">Health<i className="fas fa-arrows-alt-h"></i>Span</h1>
           <NavLink to="/home" activeClassName="active">Home</NavLink>
-          <NavLink to="/provider" activeClassName="active">Provider Portal</NavLink>
+          <NavLink to="/providerlogin" activeClassName="active">Provider Portal</NavLink>
           <NavLink to="/patient" activeClassName="active">Patient Portal</NavLink>
         </div>
+
         <Route render={({location}) => (
           <TransitionGroup>
             <CSSTransition
@@ -28,7 +32,7 @@ class App extends Component {
             >
               <Switch location={location}>
                 <Route path="/home" component={Home} />
-                <Route path="/provider" component={Provider} />
+                <Route path="/providerlogin" component={ProviderLogin} />
                 <Route path="/patient" component={Patient} />
               </Switch>
             </CSSTransition>
