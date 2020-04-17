@@ -124,6 +124,12 @@ section {
   font-size: 17px;
   word-wrap: break-word;
 }
+.inputHistory {
+  width: 400px;
+  height: 200px;
+  font-size: 17px;
+  word-wrap: break-word;
+}
 
 
 

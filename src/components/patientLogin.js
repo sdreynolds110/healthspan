@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../App.css";
 
-class ProviderForm extends Component {
+class PatientForm extends Component {
   // Setting the component's initial state
   state = {
     firstName: "",
@@ -45,16 +45,6 @@ class ProviderForm extends Component {
         <form className="register">
             <input
                 className="input"
-                value={this.state.titleName}
-                name="titleName"
-                onChange={this.handleInputChange}
-                type="text"
-                placeholder="Title"
-            />
-            <br></br>
-            <br></br>
-            <input
-                className="input"
                 value={this.state.firstName}
                 name="firstName"
                 onChange={this.handleInputChange}
@@ -95,51 +85,21 @@ class ProviderForm extends Component {
             <br></br>
             <input
                 className="input"
-                value={this.state.centerName}
-                name="centerName"
+                value={this.state.dobName}
+                name="dobName"
                 onChange={this.handleInputChange}
                 type="text"
-                placeholder="Medical Center"
-            />
-            <br></br>
-            <br></br>
-            <input
-                className="input"
-                value={this.state.educationName}
-                name="educationName"
-                onChange={this.handleInputChange}
-                type="text"
-                placeholder="Education"
-            />
-            <br></br>
-            <br></br>
-            <input
-                className="input"
-                value={this.state.experieneName}
-                name="experienceName"
-                onChange={this.handleInputChange}
-                type="text"
-                placeholder="Years of Experience"
-            />
-            <br></br>
-            <br></br>
-            <input
-                className="input"
-                value={this.state.licensesName}
-                name="licensesName"
-                onChange={this.handleInputChange}
-                type="text"
-                placeholder="Licensure"
+                placeholder="Date of Birth"
             />
             <br></br>
             <br></br>
             <textarea
-                className="inputBio"
-                value={this.state.bioName}
-                name="bioName"
+                className="inputHistory"
+                value={this.state.historyName}
+                name="historyName"
                 onChange={this.handleInputChange}
                 type="text"
-                placeholder="Basic Information"
+                placeholder="Previous Medical History"
             />
             <br></br>
             <br></br>
@@ -152,5 +112,4 @@ class ProviderForm extends Component {
   }
 }
 
-export default ProviderForm;
-
+export default PatientForm;
