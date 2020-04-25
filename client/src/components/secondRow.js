@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import "../App.css";
-import { Route, NavLink, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import { CSSTransition, TransitionGroup, } from 'react-transition-group';
 import RegistrationForm from './registration';
+import ProviderPortal from './providerPortal';
+
 
 
 
@@ -22,7 +24,7 @@ render() {
                     <h3 className="healthTip">Health Tip of the Day!</h3>
                     <div className="card">
                         <div className="content">
-                            <p className="tipCall">BLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAHBLAH</p>
+                            <p className="tipCall">An API call at the loading of the site here would display a health tip found in either an existent API database or one created in this project</p>
                         </div>
                     </div>
                 </div>
@@ -56,17 +58,17 @@ render() {
                             />
                             <br></br>
                             <br></br>
-                            <button className="login" onClick={this.handleFormSubmit}>Sign In</button>
+                            <button className="login" onClick={this.handleFormSubmit}><Link to="/providerportal">Login</Link></button>
                             <br></br>
                             <br></br>
                         </form>
-                        <p>Not registered? Fill in the information <NavLink to="/registration" activeClassName="active">here</NavLink> to become a part of HealthSpan.</p>
+                        <p>Not registered? Fill in the information <Link to="/registration">here</Link> to become a part of HealthSpan.</p>
 
                         </div>
                     </div>
                 </div>
             </div>
-            <Route render={({location}) => (
+            <BrowserRouter render={({location}) => (
                 <TransitionGroup>
                     <CSSTransition
                         key={location.key}
@@ -75,6 +77,7 @@ render() {
                     >
                     <Switch location={location}>
                         <Route path="/registration" component={RegistrationForm} />
+                        <Route path="/providerportal" component={ProviderPortal} />
                     </Switch>
                     </CSSTransition>
                 </TransitionGroup>

@@ -37,7 +37,7 @@ body {
 .nav a {
   display: inline-block;
   text-align: center;
-  margin: 50px 40px;
+  margin: 50px 100px;
   padding: 0.5rem 2rem;
   border: 1px rgba(255,255,255,0.5) solid;
   transition: all 0.3s linear;
