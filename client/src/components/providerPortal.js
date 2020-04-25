@@ -54,6 +54,7 @@ class ProviderPortal extends Component {
               <div className="row">
                   <div className="col col-md-5">
                       <div className="card">
+                          <h3>Put in patient's information here:</h3>
                         <form onSubmit={this.submit}>
                             <br></br>
                             <br></br>
