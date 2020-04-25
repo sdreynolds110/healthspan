@@ -67,18 +67,18 @@ render() {
                 </div>
             </div>
             <Route render={({location}) => (
-          <TransitionGroup>
-            <CSSTransition
-              key={location.key}
-              timeout={450}
-              classNames="fade"
-            >
-              <Switch location={location}>
-              <Route path="/registration" component={RegistrationForm} />
-              </Switch>
-            </CSSTransition>
-          </TransitionGroup>
-        )} />
+                <TransitionGroup>
+                    <CSSTransition
+                        key={location.key}
+                        timeout={450}
+                        classNames="fade"
+                    >
+                    <Switch location={location}>
+                        <Route path="/registration" component={RegistrationForm} />
+                    </Switch>
+                    </CSSTransition>
+                </TransitionGroup>
+                )} />
         </div>
     )
 }
