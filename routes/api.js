@@ -14,9 +14,19 @@ router.get("/", (req, res) => {
       })
 });
 router.post("/save", (req, res) => {
-    console.log("Body:", req.body);
-    res.json(data);
-        msg: "The data you've entered has been submitted"
+    const data = req.body;
+    const newHealthRecord = new HealthRecord(data);
+
+    newHealthRecord.save((error) => {
+        if (error) {
+            res.status(500).json({ msg: "Data failed" });
+            return;
+        } else {
+            res.json(data);
+            msg: "The data you've entered has been submitted"
+        }
+    });
+
 });
 router.get("/name", (req, res) => {
     const data = {

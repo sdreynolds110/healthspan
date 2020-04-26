@@ -3,6 +3,7 @@ import { Route, NavLink, Switch } from "react-router-dom";
 import './App.css';
 import Home from './components/home';
 import ProviderPortal from './components/providerPortal';
+import RegistrationForm from "./components/registration"
 import { CSSTransition, TransitionGroup, } from 'react-transition-group';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -19,6 +20,7 @@ class App extends Component {
           <h1 className="navbar-brand">Health<i className="fas fa-arrows-alt-h"></i>Span</h1>
           <NavLink to="/home" activeClassName="active">Home</NavLink>
           <NavLink to="/providerportal" activeClassName="active">Provider Portal</NavLink>
+          <NavLink to="/registration" activeClassName="active">Registration</NavLink>
         </div>
 
         <Route render={({location}) => (
@@ -31,6 +33,7 @@ class App extends Component {
               <Switch location={location}>
                 <Route path="/home" component={Home} />
                 <Route path="/providerportal" component={ProviderPortal} />
+                <Route path="/registration" component={RegistrationForm} />
               </Switch>
             </CSSTransition>
           </TransitionGroup>
