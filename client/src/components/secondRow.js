@@ -24,7 +24,7 @@ render() {
                     <h3 className="healthTip">Health Tip of the Day!</h3>
                     <div className="card">
                         <div className="content">
-                            <p className="tipCall">An API call at the loading of the site here would display a health tip found in either an existent API database or one created in this project</p>
+                            <p className="tipCall">An API call at the loading of the site here would display a health tip found in either a third-party API database or one created in this project</p>
                         </div>
                     </div>
                 </div>
